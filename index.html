@@ -9,43 +9,55 @@
 </head>
 <body>
     <header>
-        <div>
+        <div id="headerFlex">
             <div>
                 <button class="btn" id="viewHigh">View Highscores</button>
+                <ol id="scoreList">
+                    <li>
+                        1st
+                    </li>
+                    <li>
+                        2nd
+                    </li>
+                    <li>
+                        3rd
+                    </li>
+                    <li>
+                        4th
+                    </li>
+                </ol>
             </div>
-            <div>
-                <h2>Time left: <span id="timer">10 seconds.</span></h2>
+            <div id="timePoint">
+                <h2 class="timeLeft">Time left: <span id="timer">10 seconds.</span></h2>
+                <h2 >Points: [ <span id="points">0</span> ]</h2>
             </div>
+            
+            
+
         </div>
     </header>
 
     <main id="mainContainer">
+        <h2 id="intro">Press the Button to Start coding Quiz</h2>
+        <button id="startQuiz">Start Quiz</button>
         <div id="quizContainer">
             <h1 id="question">question to ask here</h1>
-
-            <form>
-                <input type="radio" id="opt1" name="questions" value="opt1">
-                <label for="opt1">examp 1</label><br>
-                <input type="radio" id="opt2" name="questions" value="opt2">
-                <label for="opt2">examp 2</label><br>
-                <input type="radio" id="opt3" name="questions" value="opt3">
-                <label for="opt3">examp 3</label><br>
-                <input type="radio" id="opt4" name="questions" value="opt4">
-                <label for="opt4">examp 4</label><br>
-
-                <button id="submitBtn">Submit</button>
-            </form>
-            <pre id="log"></pre>
-
-            <button id="startQuiz">Press start to play</button>
+            <div id="btnFlex">
+                <button id="opt1">examp1</button>
+                <button id="opt2">examp2</button>
+                <button id="opt3">examp3</button>
+                <button id="opt4">examp4</button>
+            </div>
+            <h3 id="yesNo"></h3>
+        </div>
+        <div id="endgame">
+            <div id="finalScore"></div>
+            <input id="initials" type="text" size="20" placeholder="Please enter name"/>
+            <button id="submitScore">Submit High score</button>
         </div>
     </main>
 
-    <div id="endgame">
-        <div id="finalScore"></div>
-        <input id="initials" type="text" size="20" placeholder="Please enter name"/>
-        <button id="submitScore">Submit High score</button>
-    </div>
+    
 
     <script src="assets/javascript/script.js"></script>
 </body>
